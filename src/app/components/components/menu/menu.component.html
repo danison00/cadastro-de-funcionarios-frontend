@@ -1,0 +1,70 @@
+<div class="menu">
+
+  <div class="home">
+    <div class="">
+      <a routerLink="home" class="link-home">
+
+        <button [style.background-color]="'#d85382'"  mat-fab extended>
+          <mat-icon>home</mat-icon>
+          Home
+        </button>
+
+      </a>
+
+    </div>
+  </div>
+  <mat-list>
+
+    <div class="title">
+      <mat-list-item><span class="white">Departamentos</span></mat-list-item>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <a routerLink="departamentos" class="">
+      <mat-list-item class="link"> <span class="">Listar</span> </mat-list-item>
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <a routerLink="departamentos/cadastro" class="">
+      <mat-list-item class="link">Cadastrar</mat-list-item>
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <div class="title">
+      <mat-list-item><span class="white">Cargos</span></mat-list-item>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <a routerLink="cargos" class="">
+      <mat-list-item class="link">Listar</mat-list-item>
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <a routerLink="cargos/cadastro" class="">
+      <mat-list-item class="link">Cadastrar</mat-list-item>
+    </a>
+
+    <div class="title">
+      <mat-list-item><span class="white">Funcionarios</span></mat-list-item>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <a routerLink="funcionarios" class="">
+      <mat-list-item class="link">Listar</mat-list-item>
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <a routerLink="funcionarios/cadastro" class="">
+      <mat-list-item class="link">Cadastrar</mat-list-item>
+    </a>
+
+  </mat-list>
+
+</div>
