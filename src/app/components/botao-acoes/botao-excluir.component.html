@@ -3,7 +3,6 @@
     aria-label="Example icon button with a menu icon">
     <mat-icon>edit</mat-icon>
   </button>
-  <button (click)="deletar()" class="btn-del" mat-mini-fab color="warn" aria-label="Example icon button with a menu icon">
-    <mat-icon>delete</mat-icon>
-  </button>
+  <app-botao-dialog  [id]="id" (deleteEvent)="onConfirmDelete($event)"></app-botao-dialog>
+
 </div>

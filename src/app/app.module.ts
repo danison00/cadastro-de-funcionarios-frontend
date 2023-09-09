@@ -10,6 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -27,7 +29,11 @@ import { ListarCargoComponent } from './components/cargo/listar-cargo/listar-car
 import { ListarFuncionarioComponent } from './components/funcionario/listar-funcionario/listar-funcionario.component';
 import { CadastrarFuncionarioComponent } from './components/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BotaoExcluirComponent } from './components/botao-excluir/botao-excluir.component';
+import { BotaoExcluirComponent } from './components/botao-acoes/botao-excluir.component';
+import { BotaoComponent } from './service/dialog-excluir/excluir/botao/botao-dialog.component';
+import { DialogWindowComponent } from './service/dialog-excluir/excluir/dialog-window/dialog-window.component';
+
+
 
 @NgModule({
   declarations: [
@@ -41,6 +47,11 @@ import { BotaoExcluirComponent } from './components/botao-excluir/botao-excluir.
     ListarFuncionarioComponent,
     CadastrarFuncionarioComponent,
     BotaoExcluirComponent,
+    BotaoComponent,
+    DialogWindowComponent
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -56,7 +67,10 @@ import { BotaoExcluirComponent } from './components/botao-excluir/botao-excluir.
     MatSelectModule,
     FormsModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
