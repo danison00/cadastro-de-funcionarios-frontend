@@ -14,17 +14,33 @@ import {MatTableModule} from '@angular/material/table';
 
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent } from './components/components/menu/menu.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ListarDepartamentoComponent } from './components/departamento/listar-departamento/listar-departamento.component';
+import { CadastrarDepartamentoComponent } from './components/departamento/cadastrar-departamento/cadastrar-departamento.component';
+import { CadastrarCargoComponent } from './components/cargo/cadastrar-cargo/cadastrar-cargo.component';
+import { ListarCargoComponent } from './components/cargo/listar-cargo/listar-cargo.component';
+import { ListarFuncionarioComponent } from './components/funcionario/listar-funcionario/listar-funcionario.component';
+import { CadastrarFuncionarioComponent } from './components/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BotaoExcluirComponent } from './components/botao-excluir/botao-excluir.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     MenuComponent,
+    ListarDepartamentoComponent,
+    CadastrarDepartamentoComponent,
+    CadastrarCargoComponent,
+    ListarCargoComponent,
+    ListarFuncionarioComponent,
+    CadastrarFuncionarioComponent,
+    BotaoExcluirComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +55,8 @@ import { MenuComponent } from './components/components/menu/menu.component';
     MatButtonModule,
     MatSelectModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

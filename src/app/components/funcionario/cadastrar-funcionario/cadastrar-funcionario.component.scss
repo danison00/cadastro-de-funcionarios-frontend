@@ -1,0 +1,51 @@
+.row
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.column{
+  width: 50%;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+
+}
+mat-divider{
+  margin-bottom: 30px;
+}
+form{
+  width: 60%;
+  padding: 7% 8% 0 8%;
+}
+.salario{
+  width: 35%;
+}
+.departamento{
+  width: 27%;
+}
+.name{
+  width:  65%;
+}
+.w-33
+{
+  width: 32%;
+}
+.m-25{
+  margin-left: 25px ;
+}
+.w-50{
+  width: 50%;
+}
+.btn{
+  display: flex;
+  justify-content: flex-end;
+}
+span{
+  color: aliceblue;
+}
+
+
+

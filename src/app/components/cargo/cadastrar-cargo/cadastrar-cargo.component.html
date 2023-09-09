@@ -1,0 +1,25 @@
+<div class="content">
+  <form>
+
+    <div class="row">
+
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input textField="digite um nome..." matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Departamento</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="food">
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <button [style.background-color]="'#2d78b6'" mat-raised-button> <span>Salvar</span></button>
+
+  </form>
+
+</div>

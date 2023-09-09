@@ -1,0 +1,84 @@
+<div class="content">
+
+  <form class="form">
+
+    <div class="row">
+
+
+      <mat-form-field class="name">
+        <mat-label>Nome</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field class="salario m-25">
+        <mat-label>Salário</mat-label>
+        <input type="number" matInput>
+      </mat-form-field>
+
+
+    </div>
+
+    <div class="row">
+
+
+      <mat-form-field>
+        <mat-label>Cargo</mat-label>
+        <mat-select name="food">
+          <mat-option>
+
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="row">
+
+      <mat-form-field class="w-50">
+        <mat-label>Logradouro</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field class="w-50 m-25">
+        <mat-label>Bairro</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+    </div>
+    <div class="row">
+      <mat-form-field class="w-33">
+        <mat-label>Cidade</mat-label>
+        <input matInput>
+
+      </mat-form-field>
+      <mat-form-field class="w-33">
+        <mat-label>Numero</mat-label>
+        <input type="number" matInput>
+      </mat-form-field>
+
+      <mat-form-field class="w-33">
+        <mat-label>Cep</mat-label>
+        <input type="number" matInput>
+      </mat-form-field>
+
+
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>UF</mat-label>
+        <mat-select name="food">
+          <mat-option>
+
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="row btn">
+      <button [style.background-color]="'#2d78b6'" mat-raised-button> <span>Salvar</span></button>
+    </div>
+
+  </form>
+
+</div>
