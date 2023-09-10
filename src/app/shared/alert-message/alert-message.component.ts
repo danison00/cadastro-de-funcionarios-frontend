@@ -1,12 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-  Renderer2,
-  ElementRef,
-} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-alert-message',
@@ -14,7 +6,7 @@ import {
   styleUrls: ['./alert-message.component.scss'],
 })
 export class AlertMessageComponent implements OnInit {
-  constructor(public renderer: Renderer2, private elementRef: ElementRef) {}
+  constructor() {}
 
   @Input() message: string;
   @Output() closeAlert: EventEmitter<void> = new EventEmitter<void>();

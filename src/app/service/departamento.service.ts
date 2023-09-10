@@ -1,15 +1,14 @@
-import {
-  HttpClient,
-  HttpHeaders,
-} from '@angular/common/http';
+import { Departamento } from './../shared/model/Departamento.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
-import { Departamento } from '../shared/model/Departamento.model';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class DepartamentoService {
+
   api: string = 'http://localhost:8080/api/departamentos';
 
   httpOptions = {
@@ -30,5 +29,10 @@ export class DepartamentoService {
 
     return this.httpClient.delete<void>(this.api+'/'+id);
 
+  }
+
+  public salvar(departamento : Departamento): Observable<void>{
+
+    return this.httpClient.post<void>(this.api, departamento, this.httpOptions);
   }
 }
