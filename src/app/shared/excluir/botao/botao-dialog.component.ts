@@ -36,7 +36,6 @@ export class BotaoComponent {
   }
 
   public onDelete() {
-    alert('vou excluir '+this.id);
     this.deleteEvent.emit(this.id);
   }
 }

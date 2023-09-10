@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { Departamento } from './../../../shared/model/Departamento.model';
 import { DepartamentoService } from './../../../service/departamento.service';
 import { Component, OnInit } from '@angular/core';
-import { BotaoComponent } from '../../../service/dialog-excluir/excluir/botao/botao-dialog.component';
+import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
 
 @Component({
   selector: 'app-listar-departamento',
@@ -14,36 +14,54 @@ export class ListarDepartamentoComponent implements OnInit {
 
   departamentos: Departamento[];
 
+  public message: string;
+  public fail: boolean = false;
+  public mostrarAlert: boolean = false;
+
   ngOnInit(): void {
     this.listarDepartamentos();
   }
 
   public listarDepartamentos(): void {
-    console.log('busacandoo');
-
-    this.service.listarDepartamento().subscribe(
-      (departamentos: Departamento[]) => {
+    this.service.listarDepartamento().subscribe({
+      next: (departamentos: Departamento[]) => {
         this.departamentos = departamentos;
+
       },
-      (response) => {
+      error: (response) => {
+
         console.log(response.message);
+        this.fail=true
       }
-    );
+    });
   }
 
   public onEditar(id: number): void {
     alert('eu sou o alert editar' + id);
   }
   public onDeletar(id: number): void {
+    this.service.apagarDepartamento(id).subscribe({
+      next: () => {
 
-    this.service.apagarDepartamento(id).subscribe(
-      () => {
-        alert('excluido!');
+        this.a('Excluído com sucesso!');
+
         this.listarDepartamentos();
       },
-      (error) => {
-        alert(error);
+
+      error: (errorResponse) => {
+         this.a(errorResponse.error.message);
+         this.fail = true;
+
       }
-    );
+    });
+  }
+  public closeAlert(): void {
+    this.mostrarAlert = false;
+  }
+  public a(message: string): void {
+
+    this.message = message;
+    this.mostrarAlert = true;
+    setTimeout(()=>{this.mostrarAlert=false; this.fail=false}, 3500);
   }
 }

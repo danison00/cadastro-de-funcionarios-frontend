@@ -4,6 +4,13 @@
 
     <div class="table-content">
 
+
+      <div class="alert">
+
+        <app-alert-message [message]="message" *ngIf="mostrarAlert" (closeAlert)="closeAlert()" [fail]="fail"></app-alert-message>
+      </div>
+
+
       <div class="title">
 
         <mat-icon class="icon">list</mat-icon>
@@ -32,7 +39,8 @@
           <th mat-header-cell *matHeaderCellDef> Ação </th>
           <td mat-cell *matCellDef="let element">
 
-            <app-botao-excluir [id]="element.id" (editarEvent)="onEditar($event)" (deletarEvent)="onDeletar($event)"></app-botao-excluir>
+            <app-botao-excluir [id]="element.id" (editarEvent)="onEditar($event)"
+              (deletarEvent)="onDeletar($event)"></app-botao-excluir>
 
           </td>
         </ng-container>

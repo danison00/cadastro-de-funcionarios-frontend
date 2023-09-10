@@ -30,9 +30,9 @@ import { ListarFuncionarioComponent } from './components/funcionario/listar-func
 import { CadastrarFuncionarioComponent } from './components/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BotaoExcluirComponent } from './components/botao-acoes/botao-excluir.component';
-import { BotaoComponent } from './service/dialog-excluir/excluir/botao/botao-dialog.component';
-import { DialogWindowComponent } from './service/dialog-excluir/excluir/dialog-window/dialog-window.component';
-
+import { AlertMessageComponent } from './shared/alert-message/alert-message.component';
+import { DialogWindowComponent } from './shared/excluir/dialog-window/dialog-window.component';
+import { BotaoComponent } from './shared/excluir/botao/botao-dialog.component';
 
 
 @NgModule({
@@ -48,10 +48,8 @@ import { DialogWindowComponent } from './service/dialog-excluir/excluir/dialog-w
     CadastrarFuncionarioComponent,
     BotaoExcluirComponent,
     BotaoComponent,
-    DialogWindowComponent
-
-
-
+    DialogWindowComponent,
+    AlertMessageComponent
   ],
   imports: [
     BrowserModule,

@@ -28,9 +28,7 @@ export class DepartamentoService {
 
   public apagarDepartamento(id: number): Observable<void>{
 
-    return this.httpClient.delete<void>(this.api+'/'+id).pipe(
-       catchError((response: any)=> {return throwError(response.error.message)}//throwError(()=> new Error(error))
-       )
-    );
+    return this.httpClient.delete<void>(this.api+'/'+id);
+
   }
 }

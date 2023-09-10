@@ -1,0 +1,19 @@
+<div class="card">
+
+  <div [ngClass]="classAlertContent" class="alert">
+
+
+    <div class="content">
+
+    <div class="message">
+      <span class="alertText" [ngClass]="classAlertText">{{message}}</span>
+    </div>
+    <div class="icon">
+      <button (click)="disposeAlert()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+</div>
