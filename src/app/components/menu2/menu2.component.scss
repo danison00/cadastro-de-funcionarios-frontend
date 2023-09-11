@@ -1,0 +1,42 @@
+.home {
+  padding: 0.5rem;
+}
+
+.link-home {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.icon {
+  margin-right: 5px;
+}
+span {
+  font-size: 18px;
+}
+.menu {
+  padding: 10px 0px 0px 10px;
+  margin-top: 20px;
+}
+.title {
+  background-color: #2d78b6;
+
+}
+.link{
+  color: white;
+}
+.link:hover {
+  background-color: #9bbbd4;
+  cursor: pointer;
+}
+.a:hover {
+  cursor: pointer;
+}
+.white{
+  color: antiquewhite;
+
+}
+

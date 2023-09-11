@@ -1,5 +1,5 @@
 <div class="content">
-  <form>
+  <form #formulario="ngForm">
     <div class="alert">
       <app-alert-message *ngIf="mostrarAlert" [fail]="fail" [message]="message" (closeAlert)="closeAlert()"></app-alert-message>
     </div>
@@ -7,8 +7,9 @@
 
     <mat-form-field>
       <mat-label>Nome</mat-label>
-      <input [(ngModel)]="nome" name="nome" textField="digite um nome..." matInput>
+      <input  [(ngModel)]="nome" name="nome" textField="digite um nome..." matInput>
     </mat-form-field>
+
     <button [style.background-color]="'#2d78b6'" mat-raised-button (click)="salvar()"> <span>Salvar</span></button>
 
 

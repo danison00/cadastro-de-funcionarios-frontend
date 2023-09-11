@@ -19,7 +19,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './components/menu/menu.component';
 import { ListarDepartamentoComponent } from './components/departamento/listar-departamento/listar-departamento.component';
@@ -33,12 +32,15 @@ import { BotaoExcluirComponent } from './components/botao-acoes/botao-excluir.co
 import { AlertMessageComponent } from './shared/alert-message/alert-message.component';
 import { DialogWindowComponent } from './shared/excluir/dialog-window/dialog-window.component';
 import { BotaoComponent } from './shared/excluir/botao/botao-dialog.component';
+import { Toolbar2Component } from './components/toolbar2/toolbar2.component';
+import { Menu2Component } from './components/menu2/menu2.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
     MenuComponent,
     ListarDepartamentoComponent,
     CadastrarDepartamentoComponent,
@@ -49,7 +51,10 @@ import { BotaoComponent } from './shared/excluir/botao/botao-dialog.component';
     BotaoExcluirComponent,
     BotaoComponent,
     DialogWindowComponent,
-    AlertMessageComponent
+    AlertMessageComponent,
+    Toolbar2Component,
+    Menu2Component,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DepartamentoService } from 'src/app/service/departamento.service';
-import { Departamento } from 'src/app/shared/model/Departamento.model';
+import { DepartamentoService } from '../../../service/departamento.service';
+import { Departamento } from '../../../shared/model/Departamento.model';
 
 @Component({
   selector: 'app-cadastrar-departamento',
@@ -18,32 +18,39 @@ export class CadastrarDepartamentoComponent {
   timeoutId: any;
 
   public salvar(): void {
-    this.departamento.nome = this.nome;
+    if (this.nome !== '') {
 
-    this.departamentoService.salvar(this.departamento).subscribe({
-      next: () => {
-        this.showMessageAlert('Departamento Cadastrado!', false);
-      },
-      error: (responseError) => {
-        this.showMessageAlert(responseError.error.message, true);
-      },
-    });
+
+
+      this.departamento.nome = this.nome;
+
+      this.departamentoService.salvar(this.departamento).subscribe({
+        next: () => {
+          this.showMessageAlert('Departamento Cadastrado!', false);
+          this.nome = '';
+        },
+        error: (responseError) => {
+          this.showMessageAlert(responseError.error.message, true);
+        },
+      });
+    } else {
+      this.showMessageAlert('Digite um nome válido', true);
+    }
   }
 
   public closeAlert(): void {
     this.mostrarAlert = false;
   }
   public showMessageAlert(message: string, fail: boolean): void {
-
     this.mostrarAlert = false;
-    setTimeout(()=>{
+    setTimeout(() => {
       this.mostrarAlert = true;
       this.fail = fail;
       this.message = message;
       clearTimeout(this.timeoutId);
-      this.timeoutId = setTimeout(() => {this.mostrarAlert = false;}, 3800);
-
-    }, 1)
-
+      this.timeoutId = setTimeout(() => {
+        this.mostrarAlert = false;
+      }, 3800);
+    }, 1);
   }
 }

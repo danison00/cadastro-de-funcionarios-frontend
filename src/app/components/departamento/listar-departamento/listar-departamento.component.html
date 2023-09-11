@@ -39,8 +39,8 @@
           <th mat-header-cell *matHeaderCellDef> Ação </th>
           <td mat-cell *matCellDef="let element">
 
-            <app-botao-acoes [id]="element.id" (editarEvent)="onEditar($event)"
-              (deletarEvent)="onDeletar($event)"></app-botao-acoes>
+            <app-botao-excluir [id]="element.id" (editarEvent)="onEditar($event)"
+              (deletarEvent)="onDeletar($event)"></app-botao-excluir>
 
           </td>
         </ng-container>
